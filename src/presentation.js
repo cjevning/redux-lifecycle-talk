@@ -196,18 +196,18 @@ export default class Presentation extends React.Component {
             <Heading size={2} textColor="white">
               Actions ~= Events
             </Heading>
-          <CodePane padding="10px" textSize="25px" language="javascript" source={`
+          <CodePane padding="10px" textSize="20px" language="javascript" source={`
   import reduxStore from '../redux/store';
   console.log(reduxStore); // { itemsInCart: 21 }
 
   const addToCartAction = (cartData) => reduxStore.dispatch({ type: ADD_CART_ITEM, data: cartData });
           `}/>
-          <CodePane padding="10px" textSize="25px" language="javascript" source={`
+          <CodePane padding="10px" textSize="20px" language="javascript" source={`
   import { addToCartAction } from '../redux/actions;
 
   <button onClick={() => addToCartAction(cartData)} />
           `}/>
-          <CodePane padding="10px" textSize="25px" language="javascript" source={`
+          <CodePane padding="10px" textSize="20px" language="javascript" source={`
   console.log(reduxStore); // { itemsInCart: 22 }
           `}/>
         </Slide>
@@ -223,12 +223,12 @@ export default class Presentation extends React.Component {
             </Heading>
         </Slide>
         <Slide bgColor="tertiary" transition={['zoom']}>
-            <Heading size={2} textColor="white">
+            <Heading size={2} textColor="black">
               Reducers ~= Array.Reduce
             </Heading>
         </Slide>
         <Slide bgColor="tertiary">
-            <Heading size={2} textColor="white">
+            <Heading size={2} textColor="black">
               Reducers ~= Array.Reduce
             </Heading>
           <CodePane textSize="25px" language="javascript" source={`
@@ -238,9 +238,13 @@ export default class Presentation extends React.Component {
     return acc + item;
   }, 0);
           `}/>
+          <BlockQuote textSize="20px">
+            <Quote textSize="40px">Reduce is a way of deriving a single result from a series of values.</Quote>
+            <Cite>Josh Comeau - Khan Academy</Cite>
+          </BlockQuote>
         </Slide>
         <Slide bgColor="tertiary">
-            <Heading size={2} textColor="white">
+            <Heading size={2} textColor="black">
               Reducers ~= Array.Reduce
             </Heading>
           <Image height={200} src={reduce} alt="reduce visualization"></Image>
